@@ -21,6 +21,7 @@ To run the project locally:
 The application currently uses dummy data to demonstrate the UI layout and filter capabilities. Before deploying, you should replace this dummy data with your real affiliate links and actual product images.
 
 **Instructions:**
+
 1. Open the data file: `src/data/stoves.js`.
 2. Delete the dummy stove objects or modify them.
 3. For each object, supply your real parameters. You should update:
@@ -32,8 +33,9 @@ The application currently uses dummy data to demonstrate the UI layout and filte
    - `imageColor`: This was a placeholder for images. You can replace this key with an `imageUrl` and then modify `src/components/ProductCard.jsx` to render an `<img src={stove.imageUrl} />` instead of the background color div.
 4. Once your new data object is set, update `src/components/ProductCard.jsx` to swap the placeholder `#` link with your real Amazon Affiliate link:
    ```jsx
-   <a href={stove.affiliateLink} ...>Check Price on Amazon</a>
+   <a href={stove.productUrl} ...>Click Here to Buy</a>
    ```
 
 ## Deployment on Vercel
+
 This project uses the standard Vite build command (`npm run build`). When deploying to Vercel, the platform will automatically detect it as a Vite framework and configure the build settings seamlessly.
